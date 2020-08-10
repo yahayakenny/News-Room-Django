@@ -59,34 +59,37 @@
         <div class="container container-fluid top">
             <h1 class = "text-primary text-center">CREATE AN ACCOUNT</h1><br>
         </div>
-   
+        <h1 class = "note text-danger">{{note}}</h1><hr>
         <div class="container container-fluid">
-            <form id = "form" action = "" method="POST">   
+            <form id = "form" action = "" method="POST"> 
+              {% csrf_token %}  
                 <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" >
+                    <label for="first_name">First Name</label>
+                    <input type="text" class="form-control" id="first_name" name = "first_name" >
+                </div><br>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" class="form-control" id="last_name" name = "last_name" >
                 </div><br>
                 <div class="form-group">
                     <label for="username">User Name</label>
-                    <input type="text" class="form-control" id="username" >
+                    <input type="text" class="form-control" id="username" name = "username" >
                 </div><br>
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" >
+                    <input type="email" class="form-control" id="email" name = "email" >
                     <small class="form-text text-muted">Your email address will remain confidential.</small>
                 </div><br>
                 <div class="form-group">
                      <label for="password1">Password</label>
-                    <input type="password" class="form-control" id="password1">
+                    <input type="password" class="form-control" id="password1" name = "password1">
                 </div><br>
                 <div class="form-group">
-                     <label for="password2"> Confirm Password</label>
-                    <input type="password" class="form-control" id="password2">
-                </div><br>   
-                <br><br>
-
+                     <label for="password2">Confirm Password</label>
+                    <input type="password" class="form-control" id="password2" name = "password2">
+                </div><br>
                 <div class = "form-lower">
-                    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+                    <input type="submit" class="btn btn-primary"><br><br>
                     <small class="form-text text-muted">Already have an account?</small>  
                     <div class="row">
                       <div class="col-5">
@@ -100,7 +103,7 @@
             </form>       
         </div>
     </div>
-
+   
 
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
