@@ -10,3 +10,6 @@ def books(request):
 
 def movies(request):
     return render(request, 'movies.html')
+
+def register(request):
+    return render(request, 'register.html')

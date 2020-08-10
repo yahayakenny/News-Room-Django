@@ -1,0 +1,93 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat';
+    
+}
+
+.navbar {
+    padding:  10px 20px !important;
+    background-color: #1d1d1d !important;
+    color: white !important; 
+ }
+
+ .navbar-brand {
+     color: white !important;
+     font-family: "raleway";
+     font-size: 30px !important;
+ }
+
+ .navbar-nav li a{
+     color: white !important;
+     font-family: "raleway";
+     font-size: 20px !important;
+     padding: 20px !important;
+ }
+
+
+h1 {
+    font-size: 30px;
+}
+
+
+input {
+   width: 100% !important;
+   
+}
+
+
+button {
+    width: 100% !important;
+    font-size: 20px !important;
+    
+}
+
+label {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#sign-up {
+    font-size: 20px;
+}
+
+
+
+.form-text a:hover{
+    text-decoration: none;
+
+}
+
+
+.body {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 70%; 
+}
+
+
+
+@media (min-width: 768px){
+    .body {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     } 
+ 
+ 
+     .form-group {
+         margin: 0 auto;
+         width: 50% !important;
+         display: block;
+ 
+     }
+
+     .form-lower {
+         margin: 0 auto;
+         width: 50% !important;
+         display: block;
+
+     } 
+ 
+ }
