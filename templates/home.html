@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Raleway font -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+   
+    <!-- semantic ui -->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+     <!-- Font awesome cdn -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+     crossorigin="anonymous"
+   />  
+</head>
+<body class = "bg-light" >
+
+<!-- Navigation -->
+<nav class = "navbar navbar-expand-md navbar-light bg-dark sticky-top">    
+	<div class= "navbar-brand">
+    News Room   
+	</div>
+	<button
+	type="button"
+	class="navbar-toggler"
+	data-toggle="collapse"
+	data-target="#navbarResponsive"
+  >
+    <span class = "navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id = "navbarResponsive">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'movies' %}">Movie Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'books' %}">N.Y Times Best-Sellers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Latest Articles</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+<!-- Navigation ends -->
+
+<div class = "hero" id = "hero">
+</div>
+
+<section class = "overall-div">
+  <div id = "show-bottom-image">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" id = "news-bottom"></div><br>
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" id = "news-middle"></div><br>
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" id = "news-top"></div>
+      </div>
+    </div>
+  </div><br><br><br><br>
+  
+  <div class="show-news container-fluid ">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-lg-4" id = "show-news1"></div>       
+      <div class="col-xs-12 col-md-4 col-lg-4" id = "show-news2"></div>
+      <div class="col-xs-12 col-md-4 col-lg-4" id = "show-news3"> </div>
+    </div>
+  </div><br><br><br><br>
+  
+  <div id = "show-news-bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" id = "bottom-left"></div>
+        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" id = "bottom-right"></div>
+      </div>
+    </div>
+ </div><br><br><br><br><br>
+
+  <div id = "show-top-image">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" id = "news-min"></div>      
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" id = "news-mid"></div>
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" id = "news-max"></div>
+      </div>
+    </div>
+  </div><br><br><br><br><br>
+  
+  <div id = "show-news-image">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" id = "news-left"></div>
+        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" id = "news-right">
+        </div>
+      </div>
+    </div> 
+  </div><br><br><br><br><br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="row card-column">
+          <div class="col-md-6 col-sm-12">
+            <div class = "top-card" id = "top-card"></div>
+            <div class = "bottom-card" id = "bottom-card"></div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class = "right-card" id = "right-card"></div>
+            <div class = "bottomleft-card" id = "bottomleft-card"></div>
+          </div>
+        </div>    
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-6 ">
+        <div class = "left-card" id = "left-card"></div>       
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class = 'bg-dark'>
+  <div class="email-footer">
+          <input type="text" placeholder="Email Address">
+          <button>SUBSCRIBE</button>
+      </div>
+      <div class = "container">
+          <div class="social ">
+              <div>
+                  <p><span>SOCIAL MEDIA LINKS</span></p>
+              </div>
+              <div>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+          </div>
+      </div>
+      <div class ="container hours">
+          <h5><span>Contact Us</span></h5>
+          <h6>26, Roving Lane, Buckingham, U.K</h6>
+          <h6>Mon - Sun : 8am - 10pm</h6>
+      </div><br>
+
+      <div class="copy">
+        <h6>COPYRIGHT <span>News Room</span>..ALL RIGHTS RESERVED.</span></h6>
+        <h5>Yahaya Kehinde 2020</h5><br>
+      </div>      
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src = "{% static 'js/home.js' %}"></script>  
+</body>
+</html>

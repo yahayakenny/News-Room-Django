@@ -1,0 +1,173 @@
+html, body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.navbar {
+    padding:  15px 50px !important;
+    background-color: #1d1d1d !important;
+    color: white !important;
+    margin-bottom: 40px;
+    
+ }
+
+ .navbar-brand {
+     color: white !important;
+     font-family: "raleway";
+     font-size: 30px !important;
+ }
+
+ .navbar-nav li a{
+     color: white !important;
+     font-family: "raleway";
+     font-size: 20px !important;
+     padding: 20px !important;
+ }
+
+
+ .stores {
+     display: flex;
+     margin-left: -10px;
+ }
+
+ .stores a {
+     padding: 8px;
+     color: teal;
+     
+ }
+ 
+
+ .stores a:hover {
+     text-decoration: none;
+     list-style-type:none ;
+     color: grey;
+ }
+
+ .book {
+     margin-bottom: 70px;
+ }
+
+ .book-text h1, h2, h3, h4, h5, h6{
+     font-family: 'raleway';
+ }
+
+ .book-text h1 {
+     font-weight: bolder;
+ }
+
+h1 {
+    font-family: 'raleway';
+    font-weight: bolder;
+    
+}
+
+.image {
+    width: 300px;
+    height: 450px;
+}
+
+hr {
+    margin-bottom: 20px !important;
+}
+
+
+footer {
+    background-color: #162838;
+    width: 100%;
+    height: 500px;
+    font-family: 'Raleway';
+  
+  }
+  
+  .email-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+  .email-footer input {
+    width: 200px;
+    padding: 15px;
+    border: 1px solid white;
+    background-color: #162838;
+    color: white;
+  }
+
+  .email-footer button {
+    width: 80px;
+    background-color: #e52992;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
+  }
+
+  
+  .social {
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+  
+  }
+  
+  .fab {
+    padding: 10px;
+    font-size: 28px;
+  }
+
+  .hours {
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+  }
+
+  .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  
+  }
+  
+  .copy h6 {
+    font-size: 10px;
+  }
+
+ @media(max-width: 767px){
+    .book-text {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-top: 45px !important;
+    
+     } 
+
+     .stores a {
+        padding: 4px;
+        color: teal;
+        font-size: 12px;
+    }
+
+    .book {
+        margin-bottom: 50px !important;
+    }
+
+    h1 {
+        font-family: 'raleway';
+        font-weight: bolder;
+        font-size: 30px !important;
+        
+    }
+
+   
+
+ }
