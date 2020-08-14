@@ -1,19 +1,37 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.views.generic import View
 
 # Create your views here.
-def home(request):
+
+def home_view(request):
     return render(request, 'home.html')
 
-def books(request):
+def books_view(request):
     return render(request, 'books.html')
 
-def movies(request):
+def movies_view(request):
     return render(request, 'movies.html')
 
+def login_view(request): 
+        if request.method == "POST":
+            username = request.POST['username']    
+            password = request.POST['password']
+            
+            user = auth.authenticate(username=username, password=password)
 
-def register(request):
+            if user is not None:
+                auth.login(request, user)
+                return HttpResponseRedirect("/")
+            else:
+                messages.info(request, 'invalid credentials')
+                return HttpResponseRedirect("/")
+        else:
+            return render(request, 'login.html')
+
+def register_view(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
@@ -35,7 +53,8 @@ def register(request):
                 user = User.objects.create_user(username = username, password = password1, email = email, first_name = first_name, last_name = last_name)
                 user.save()
                 note = 'Thank you ' + first_name + ' for signing up with us'
-                return render(request, 'register.html', {'note': note})
+                print(note)
+                return redirect('/')
 
         else:
             messages.info(request,'Passwords do not match')
