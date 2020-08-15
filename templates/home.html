@@ -55,7 +55,9 @@
           <a class="nav-link" href="{%url 'books' %}">N.Y Times Best-Sellers</a>
         </li>
         {% if user.is_authenticated %}
-        <li>Hello, {{ user.first_name }}</li>
+        <li class="nav-item" style="padding-top: 20px;">
+          <a>Hey, {{ user.first_name }}</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{%url 'logout' %}">Log Out</a>
         </li>

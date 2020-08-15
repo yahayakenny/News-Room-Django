@@ -31,6 +31,10 @@ def login_view(request):
         else:
             return render(request, 'login.html')
 
+def logout_view(request):
+    auth.logout(request)
+    return HttpResponseRedirect("/")
+
 def register_view(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']
